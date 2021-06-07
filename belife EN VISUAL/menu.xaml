@@ -1,0 +1,91 @@
+﻿<Controls:MetroWindow
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:metrowpf"
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+        xmlns:behaviours="clr-namespace:MahApps.Metro.Behaviours;assembly=MahApps.Metro"
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        xmlns:controlzex="urn:controlzex" x:Class="metrowpf.menuxaml"
+        mc:Ignorable="d"
+        Title="Menú" Height="745.5" Width="582.5" WindowStartupLocation="CenterScreen" Loaded="MetroWindow_Loaded">
+    <Grid Margin="0,0,2,0">
+        <Image HorizontalAlignment="Left" Height="46" Margin="10,10,0,0" VerticalAlignment="Top" Width="181" Stretch="Fill" Source="imagenes/Logo BeLife.png"/>
+        <Controls:Tile Margin="13,116,381,421" Width="178" Title="Ver Perfil" Height="Auto" controlzex:KeyboardNavigationEx.AlwaysShowFocusVisual="True" Click="Tile_Click_6">
+            <Image Source="C:\Users\keiro\source\repos\metrowpf\imagenes\user-profile.png" Width="260" Height="119"/>
+        </Controls:Tile>
+        <Controls:Tile Margin="379,309,15,228" Width="178" Title="Ayuda" Height="178" Click="Tile_Click_8">
+            <Image Source="C:\Users\keiro\source\repos\metrowpf\imagenes\Help - 02.png" Width="150" Height="135"/>
+        </Controls:Tile>
+        <Controls:Tile Margin="379,116,15,421" Width="178" Title="Planes" Height="178" Click="Tile_Click_5">
+            <Image Source="C:\Users\keiro\source\repos\metrowpf\imagenes\Bill2-WF.png" Width="150" Height="135"/>
+        </Controls:Tile>
+        <Controls:Tile Margin="196,309,198,228" Width="178" Title="Contratos" Height="Auto" Click="Tile_Click_2">
+            <Image Source="C:\Users\keiro\source\repos\metrowpf\imagenes\agreement-02.png" Width="260" Height="119"/>
+        </Controls:Tile>
+
+        <Controls:Tile Margin="13,309,381,228" Width="178" Title="Añadir o modificar contratos" Height="178" Click="Tile_Click_3">
+            <Image Source="C:\Users\keiro\source\repos\metrowpf\imagenes\add-new.png" Width="146" Height="106" RenderTransformOrigin="0.527,0.379"/>
+        </Controls:Tile>
+        <Controls:Tile Margin="196,116,198,421" Width="178" Title="Listado de clientes" Height="178" Click="Tile_Click">
+            <Image x:Name="btnlListado" Source="C:\Users\keiro\source\repos\metrowpf\imagenes\search-wf.png" Width="150" Height="135"/>
+        </Controls:Tile>
+        <Controls:Tile Margin="10,496,384,41" Width="178" Title="Salir" Height="178" Click="Tile_Click_1">
+            <Image x:Name="btnsalir" Source="C:\Users\keiro\source\repos\metrowpf\imagenes\exit.png" Width="150" Height="135"/>
+        </Controls:Tile>
+
+        <Controls:Flyout x:Name="flyproayuda" Margin="1,0,0,289" Width="348" Header="Ayuda">
+            <Canvas Margin="0,0,10,0">
+                <Button Canvas.Left="10" Canvas.Top="-3" Width="163" Click="Button_Click" Height="163" Content="Manual de usuario" FontSize="14" RenderTransformOrigin="0.207,0.353" Background="{x:Null}" BorderBrush="Black"></Button>
+                <Label Content="Dirección del servicio técnico: Vicuña&#xD;&#xA;Mackenna 4917,San Joaquín, Región&#xD;&#xA;Metropolitana.&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;Correo de servicio técnico: cetecom@duoc.cl&#xD;&#xA;&#xD;&#xA;Numero de servicio tecnico:(2) 2560 6700" Canvas.Top="165" Height="186" FontSize="16" Width="353" FontWeight="Bold"/>
+            </Canvas>
+        </Controls:Flyout>
+        <Label x:Name="lblnombre" Content="" HorizontalAlignment="Left" Margin="332,5,0,0" VerticalAlignment="Top" Width="230" Height="46"/>
+        <Label x:Name="lbldatetime" Content="&#xA;" HorizontalAlignment="Left" Height="46" Margin="332,33,0,0" VerticalAlignment="Top" Width="230"/>
+        <Controls:Flyout  x:Name="flyperfil" Header="Ver Perfil&#x9;             " Margin="0,4,0,22" Width="326">
+            <Canvas>
+                <Controls:Tile Width="196" Height="178" Canvas.Left="60"   Margin="0" Canvas.Top="10" Background="{x:Null}" Click="Tile_Click_7"/>
+                <Image Source="C:\Users\keiro\source\repos\metrowpf\imagenes\user-profile.png" Width="128" Height="114" Canvas.Left="93" Canvas.Top="33"></Image>
+                <Label Content="Usuario:" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="22" Canvas.Top="234" FontSize="16"/>
+                <Label x:Name="lblusuario" Canvas.Left="93" Canvas.Top="234" Height="31" Width="215" Background="#00000000" FontSize="16" Content="&#xD;&#xA;" />
+                <Label Content="Rut:" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="34" Canvas.Top="301" FontSize="16" RenderTransformOrigin="1.235,0.145"/>
+                <Label x:Name="lblrut" Canvas.Left="93" Canvas.Top="301" Height="31" Width="196" Background="#00000000" FontSize="16" />
+                <Label x:Name="lblcargo" Content="Cargo:" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="22" Canvas.Top="362" FontSize="16" RenderTransformOrigin="0.586,-0.71"/>
+                <Label Canvas.Left="93" Canvas.Top="362" Height="32" Width="196" Background="#00000000" Content="Administrador" FontSize="16" />
+                <Label Content="Fecha de ingreso:" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="22" Canvas.Top="424" FontSize="16" RenderTransformOrigin="0.586,-0.71"/>
+                <Label x:Name="lblfechai" Canvas.Left="157" Canvas.Top="423" Height="32" Width="96" Background="#00000000" Content="" FontSize="16" />
+                <Button x:Name="btncamcont" Content="Cambiar contraseña" HorizontalAlignment="Left" VerticalAlignment="Top" Width="145" Canvas.Left="93" Canvas.Top="488" BorderBrush="Black" Background="{x:Null}" Click="btncamcont_Click_1"/>
+                <Button Canvas.Left="93" Canvas.Top="543" Width="145" Height="27" BorderBrush="Black" Background="{x:Null}" Content="Cambiar Informacion" Click="Button_Click_1"></Button>
+
+            </Canvas>
+        </Controls:Flyout>
+        <Controls:Flyout x:Name="flycambcontra" Position="Top" Height="310" Margin="46,-1,28,0">
+            <Canvas Width="428">
+                <Label Canvas.Left="93" Canvas.Top="62" Content="Cambiar Contraseña" FontSize="20"></Label>
+                <PasswordBox x:Name="pbconactual" Canvas.Left="44" Canvas.Top="132" Width="298" Controls:TextBoxHelper.ClearTextButton="True" Style="{StaticResource MetroButtonRevealedPasswordBox}"  Controls:TextBoxHelper.Watermark="Escriba su contraseña actual" PasswordChanged="pbconactual_PasswordChanged"></PasswordBox>
+                <PasswordBox x:Name="pbconnueva" Canvas.Left="44" Canvas.Top="178" Width="298" Controls:TextBoxHelper.ClearTextButton="True" Style="{StaticResource MetroButtonRevealedPasswordBox}" Controls:TextBoxHelper.Watermark="Escriba la nueva contraseña" PasswordChanged="pbconnueva_PasswordChanged"></PasswordBox>
+                <PasswordBox x:Name="pbconnuevare" Canvas.Left="44" Canvas.Top="224" Width="298" Controls:TextBoxHelper.ClearTextButton="True" Controls:TextBoxHelper.Watermark="Escriba otra vez la nueva contraseña" Style="{StaticResource MetroButtonRevealedPasswordBox}" PasswordChanged="pbconnuevare_PasswordChanged"></PasswordBox>
+                <Button x:Name="btnaceptar" Canvas.Left="124" Canvas.Top="272" Width="112" Content="Aceptar" Click="btnaceptar_Click"></Button>
+            </Canvas>
+        </Controls:Flyout>
+
+        <Controls:Flyout x:Name="flyprocambinfo" Position="Right" Width="286" Margin="0,0,0,108" Header="Cambiar informacion">
+
+            <Canvas>
+                <Controls:Tile Width="178" Height="178" Canvas.Left="58"  Background="{x:Null}" Margin="0" Canvas.Top="-23"/>
+                <Image Source="C:\Users\keiro\source\repos\metrowpf\imagenes\user-profile.png" Width="128" Height="114" Canvas.Left="90" Canvas.Top="10"/>
+                <TextBox x:Name="txtnombre" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Controls:TextBoxHelper.ClearTextButton="True" Controls:TextBoxHelper.Watermark="Ingrese el nombre nuevo" Canvas.Left="30" Canvas.Top="208" Width="232" BorderBrush="Black" TextChanged="txtnombre_TextChanged_1" PreviewTextInput="txtnombre_PreviewTextInput"/>
+                <TextBox x:Name="txtfechanacimiento" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="232" Controls:TextBoxHelper.ClearTextButton="True" Controls:TextBoxHelper.Watermark="Ingrese la fecha de nacimiento nueva " Canvas.Left="30" Canvas.Top="254" BorderBrush="Black" TextChanged="txtfechanacimiento_TextChanged" PreviewKeyDown="PreviewKeyDownFn"  />
+                <TextBox x:Name="txtfechaingreso" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="232" Controls:TextBoxHelper.ClearTextButton="True" Controls:TextBoxHelper.Watermark="Ingrese la fecha de ingreso nueva" Canvas.Left="30" Canvas.Top="300" BorderBrush="Black" TextChanged="txtfechaingreso_TextChanged" PreviewKeyDown="txtfechaingreso_PreviewKeyDown"/>
+                <ComboBox x:Name="cbxsexo" Canvas.Left="134" Canvas.Top="355" Width="128" Height="34" RenderTransformOrigin="0.785,0.441" BorderBrush="Black" SelectionChanged="cbxsexo_SelectionChanged"/>
+                <ComboBox x:Name="cbxestadocivil" Height="34" Canvas.Left="134" Canvas.Top="409" Width="128" BorderBrush="Black" SelectionChanged="cbxestadocivil_SelectionChanged"/>
+                <Label Content="Sexo" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="73" Canvas.Top="362" Width="56"/>
+                <Label Content="Estado CIvil" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="58" Canvas.Top="416" RenderTransformOrigin="0.831,0.481"/>
+                <Button x:Name="btnactualizar" Content="Actualizar" HorizontalAlignment="Left" Width="76" Canvas.Left="113" Canvas.Top="474" Click="btnactualizar_Click" BorderBrush="Black"/>
+
+            </Canvas>
+        </Controls:Flyout>
+
+    </Grid>
+</Controls:MetroWindow>

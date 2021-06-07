@@ -1,0 +1,47 @@
+﻿<Controls:MetroWindow
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:controls="http://metro.mahapps.com/winf/xaml/controls"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:metrowpf"
+        xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls" x:Class="metrowpf.Registro"
+         xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+         xmlns:behaviours="clr-namespace:MahApps.Metro.Behaviours;assembly=MahApps.Metro"
+            xmlns:fa="http://schemas.fontawesome.io/icons/"
+         xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        mc:Ignorable="d"
+        Title="Registro" Height="705" Width="812" Background="White" WindowStartupLocation="CenterScreen" Loaded="MetroWindow_Loaded">
+    <Grid>
+        <Image x:Name="btnajustes" Source="C:\Users\keiro\source\repos\metrowpf\imagenes\help.png" Margin="319,540,434,103" RenderTransformOrigin="0.441,-0.054"/>
+
+
+
+
+        <Image HorizontalAlignment="Left" Height="46" Margin="10,10,0,0" VerticalAlignment="Top" Width="181" Stretch="Fill" Source="imagenes/Logo BeLife.png"/>
+        <TextBox x:Name="txtrut" HorizontalAlignment="Left" Controls:TextBoxHelper.ClearTextButton="True" Controls:TextBoxHelper.Watermark="Ingrese su rut" Height="36" Margin="250,203,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="330" BorderBrush="Black" TextChanged="txtusuario_TextChanged"/>
+        <TextBox x:Name="txtnombre" HorizontalAlignment="Left" Controls:TextBoxHelper.ClearTextButton="True" Controls:TextBoxHelper.Watermark="Ingrese su nombre" Height="36" Margin="250,269,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="330" BorderBrush="Black" TextChanged="txtusuario_TextChanged" PreviewTextInput="txtnombre_PreviewTextInput"/>
+        <TextBox x:Name="txtapellido" HorizontalAlignment="Left" Controls:TextBoxHelper.ClearTextButton="True" Controls:TextBoxHelper.Watermark="Ingrese sus apellidos" Height="36" Margin="250,341,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="330" BorderBrush="Black" TextChanged="txtemail_TextChanged" PreviewTextInput="txtapellido_PreviewTextInput"/>
+        <TextBox x:Name="txtfechanacimiento" HorizontalAlignment="Left" Controls:TextBoxHelper.ClearTextButton="True" Controls:TextBoxHelper.Watermark="Ingrese su fecha de nacimiento" Height="36" Margin="250,414,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="330" BorderBrush="Black" TextChanged="txtemail_TextChanged" PreviewKeyDown="txtfechanacimiento_PreviewKeyDown"/>
+        <PasswordBox x:Name="pbcontraseña" HorizontalAlignment="Left" Controls:TextBoxHelper.ClearTextButton="True"  Style="{StaticResource MetroButtonRevealedPasswordBox}"  Controls:TextBoxHelper.Watermark="Ingrese su contraseña" Margin="250,475,0,0" VerticalAlignment="Top" Width="330" Height="38" BorderBrush="Black" PasswordChanged="pbcontraseña_PassworChanged"/>
+        <ComboBox x:Name="cbxsexo" HorizontalAlignment="Left" Margin="250,571,0,0" VerticalAlignment="Top" Width="120" AutomationProperties.Name="Sexo" SelectionChanged="cbxsexo_SelectionChanged" BorderBrush="Black"/>
+        <ComboBox x:Name="cbxestadocivil" HorizontalAlignment="Left" Margin="460,571,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="cbxestadocivil_SelectionChanged" BorderBrush="Black"/>
+        <Button x:Name="btnregistrar" Content="Crear" HorizontalAlignment="Left" Margin="334,622,0,0" VerticalAlignment="Top" Width="176" Click="btnregistrar_Click" BorderBrush="Black" Background="#FF9F37FF"/>
+        <Label Content="Crear cliente" HorizontalAlignment="Left" Margin="319,90,0,0" VerticalAlignment="Top" FontSize="36" Foreground="#FF9F37FD"/>
+        
+        <Label Content="Estado Civil" HorizontalAlignment="Left" Margin="486,540,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label Content="Sexo" HorizontalAlignment="Left" Margin="284,540,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Button Content="" HorizontalAlignment="Left" Margin="334,546,0,0" VerticalAlignment="Top" Width="22" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" FontWeight="Normal" Focusable="False" Height="20" ClickMode="Hover" RenderTransformOrigin="-0.731,0.147" Click="Button_Click_1"/>
+        <Image x:Name="btnajustes_Copy" Source="C:\Users\keiro\source\repos\metrowpf\imagenes\help.png" Margin="561,540,192,103" RenderTransformOrigin="0.441,-0.054"/>
+        <Button x:Name="btmayuda2" Content="" HorizontalAlignment="Left" Margin="580,546,0,0" VerticalAlignment="Top" Width="22" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" FontWeight="Normal" Focusable="False" Height="20" ClickMode="Hover" RenderTransformOrigin="-0.731,0.147" Click="btnayuda2_Click"/>
+        <Image x:Name="btnajustes_Copy1" Source="C:\Users\keiro\source\repos\metrowpf\imagenes\help.png" Margin="602,419,152,224" RenderTransformOrigin="0.441,-0.054"/>
+        <Button x:Name="btmayuda2_Copy" Content="" HorizontalAlignment="Left" Margin="616,419,0,0" VerticalAlignment="Top" Width="22" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" FontWeight="Normal" Focusable="False" Height="20" ClickMode="Hover" RenderTransformOrigin="-0.731,0.147" Click="btnayudafn_Click"/>
+        <Controls:Tile Margin="719,14,10,578" Width="Auto" Title="" Height="Auto" Click="Tile_Click_3" Background="{x:Null}">
+            <Image Source="C:\Users\keiro\source\repos\metrowpf\imagenes\left-arrown.png" Width="136" Height="82" RenderTransformOrigin="0.527,0.379" OpacityMask="Black"/>
+        </Controls:Tile>
+
+
+
+
+    </Grid>
+</Controls:MetroWindow>

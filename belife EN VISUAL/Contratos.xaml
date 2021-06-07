@@ -1,0 +1,24 @@
+﻿<Controls:MetroWindow x:Class="metrowpf.Contratos"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+         xmlns:behaviours="clr-namespace:MahApps.Metro.Behaviours;assembly=MahApps.Metro"
+         xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        xmlns:local="clr-namespace:metrowpf"
+        mc:Ignorable="d"
+        Title="Contratos" Height="731.1" Width="1226.628" Topmost="True" WindowStartupLocation="CenterScreen">
+    <Grid Margin="0,0,0,5">
+        <DataGrid x:Name="datagridcontratos" HorizontalAlignment="Left" Height="447" Margin="10,238,0,0" VerticalAlignment="Top" Width="1197" SelectionChanged="datafridcontratos_SelectionChanged"/>
+        <TextBox x:Name="txtbuscarc" HorizontalAlignment="Left" Height="36" Margin="418,163,0,0" Controls:TextBoxHelper.ClearTextButton="True" Controls:TextBoxHelper.Watermark="Ingrese el numero de contrato a buscar,actualizar o eliminar" TextWrapping="Wrap" VerticalAlignment="Top" Width="379" TextChanged="TextBox_TextChanged" RenderTransformOrigin="0.499,-0.167" PreviewTextInput="txtbuscarc_PreviewTextInput"/>
+        <Image HorizontalAlignment="Left" Height="46" Margin="10,10,0,0" VerticalAlignment="Top" Width="181" Stretch="Fill" Source="imagenes/Logo BeLife.png"/>
+        <Button x:Name="btnbuscar" Content="Buscar" HorizontalAlignment="Left" Margin="821,163,0,0" VerticalAlignment="Top" Width="75" Background="#FF9F37FF" Height="36" Click="btnbuscar_Click"/>
+        <Label Content="Lista de contratos" HorizontalAlignment="Left" Margin="458,69,0,0" VerticalAlignment="Top" FontSize="36" Background="Transparent" Foreground="#FF9F37FF"/>
+        <Button x:Name="btnborrar" Content="Eliminar" HorizontalAlignment="Left" Margin="914,163,0,0" VerticalAlignment="Top" Width="74" Background="#FF9F37FF" Height="36" Click="btnborrar_Click"/>
+        <Controls:Tile Margin="1090,11,55,602" Width="Auto" Title="" Height="Auto" Click="Tile_Click_3" Background="{x:Null}">
+            <Image Source="C:\Users\keiro\source\repos\metrowpf\imagenes\left-arrown.png" Width="136" Height="82" RenderTransformOrigin="0.527,0.379" OpacityMask="Black"/>
+        </Controls:Tile>
+
+    </Grid>
+</Controls:MetroWindow>

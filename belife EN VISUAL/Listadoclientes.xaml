@@ -1,0 +1,50 @@
+﻿<Controls:MetroWindow x:Class="metrowpf.Listadoclientes"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+         xmlns:behaviours="clr-namespace:MahApps.Metro.Behaviours;assembly=MahApps.Metro"
+        xmlns:fa="http://schemas.fontawesome.io/icons/"
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        xmlns:local="clr-namespace:metrowpf"
+        mc:Ignorable="d"
+        Title="Listado de clientes" Height="679.5" Width="891.5" WindowStartupLocation="CenterScreen" Background="White" Loaded="MetroWindow_Loaded">
+    <Grid>
+        <Image HorizontalAlignment="Left" Height="46" Margin="10,10,0,0" VerticalAlignment="Top" Width="181" Stretch="Fill" Source="imagenes/Logo BeLife.png"/>
+        <Label Content="Listado de clientes" HorizontalAlignment="Left" Margin="284,91,0,0" VerticalAlignment="Top" FontSize="36" Background="Transparent" Foreground="#FF9F37FF"/>
+        <TextBox x:Name="txtbuscar" HorizontalAlignment="Left" Height="27" Margin="238,237,0,0" Controls:TextBoxHelper.ClearTextButton="True" Controls:TextBoxHelper.Watermark="Ingrese el rut del cliente que desea buscar o eliminar " TextWrapping="Wrap" VerticalAlignment="Top" Width="365" BorderBrush="Black" TextChanged="TextBox_TextChanged"/>
+        <Button x:Name="btnrefrescar" Content="        Refrescar Ventana&#xA;" HorizontalAlignment="Left" Margin="721,593,0,0" VerticalAlignment="Top" Width="142" RenderTransformOrigin="2.32,11.37" BorderBrush="Black" Height="33" Background="#FF9F37FF" Click="Button_Click_1"/>
+        <DataGrid x:Name="datagridcliente" HorizontalAlignment="Left" Height="258" Margin="125,316,0,0" VerticalAlignment="Top" Width="671" BorderBrush="#CC000000" SelectionChanged="DataGrid_SelectionChanged"/>
+        <Button x:Name="btnbuscar" Content="         Buscar" HorizontalAlignment="Left" Margin="623,237,0,0" VerticalAlignment="Top" Width="77" Click="Button_Click" RenderTransformOrigin="0.466,0.111" BorderBrush="Black" Background="#FF9F37FF"/>
+        <fa:ImageAwesome x:Name="lupa" Icon="Search" Margin="634,237,237,385" RenderTransformOrigin="0.5,0.759" />
+        <Button x:Name="btneliminar" Content="Eliminar" HorizontalAlignment="Left" Margin="714,274,0,0" VerticalAlignment="Top" Width="77" RenderTransformOrigin="2.293,1.519" Click="btneliminar_Click" Background="#FF9F37FF" BorderBrush="Black"/>
+        <fa:FontAwesome x:Name="basura" Icon="Trash" Margin="682,281,132,320" RenderTransformOrigin="1.1,0.646" />
+        <fa:ImageAwesome Icon="Refresh" Margin="721,593,148,23" RenderTransformOrigin="0.182,-0.2" Width="13" />
+        <Button x:Name="btnmodificarc" Content="Modificar" HorizontalAlignment="Left" Margin="714,237,0,0" VerticalAlignment="Top" Width="77" RenderTransformOrigin="0.067,0.537" Height="27" Background="#FF9F37FF" Click="btnmodificarc_Click" BorderBrush="Black"/>
+        <Button x:Name="btncrearc" Content="Crear" HorizontalAlignment="Left" Margin="623,274,0,0" VerticalAlignment="Top" Width="77" RenderTransformOrigin="0.067,0.537" Height="27" Background="#FF9F37FF" Click="btncrearc_Click" BorderBrush="Black"/>
+        <Controls:Tile Margin="770,14,39,553" Width="Auto" Title="" Height="Auto" Click="Tile_Click_3" Background="{x:Null}">
+            <Image Source="C:\Users\keiro\source\repos\metrowpf\imagenes\left-arrown.png" Width="136" Height="82" RenderTransformOrigin="0.527,0.379" OpacityMask="Black"/>
+        </Controls:Tile>
+        <Controls:Flyout x:Name="flypro" Position="Right" Background="#FF9F37FF" Header="Actualizar Cliente" AutomationProperties.IsOffscreenBehavior="Onscreen" Width="292">
+
+            <Canvas Height="574">
+                <Controls:Tile Width="178" Height="178" Canvas.Left="58"  Background="#FF9F37FF" Margin="0" Canvas.Top="-23"/>
+                <Image Source="C:\Users\keiro\source\repos\metrowpf\imagenes\user-profile.png" Width="128" Height="114" Canvas.Left="74" Canvas.Top="10"/>
+                <TextBox x:Name="txtrut" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="232" Controls:TextBoxHelper.ClearTextButton="True" Controls:TextBoxHelper.Watermark="Ingrese el rut del cliente a modificar" Canvas.Left="30" Canvas.Top="160" BorderBrush="Black" TextChanged="txtrut_TextChanged"/>
+                <TextBox x:Name="txtnombre" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Controls:TextBoxHelper.ClearTextButton="True" Controls:TextBoxHelper.Watermark="Ingrese el nombre nuevo" Canvas.Left="30" Canvas.Top="208" Width="232" BorderBrush="Black" TextChanged="txtnombre_TextChanged" PreviewTextInput="txtnombre_PreviewTextInput"/>
+                <TextBox x:Name="txtapellido" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="232" Controls:TextBoxHelper.ClearTextButton="True" Controls:TextBoxHelper.Watermark="Ingrese el apellido nuevo" Canvas.Left="30" Canvas.Top="254" BorderBrush="Black" PreviewTextInput="txtapellido_PreviewTextInput" TextChanged="txtapellido_TextChanged"/>
+                <TextBox x:Name="txtfechanac" Height="42" TextWrapping="Wrap" VerticalAlignment="Top" Width="232" Controls:TextBoxHelper.ClearTextButton="True" Controls:TextBoxHelper.Watermark="Ingrese la fecha de nacimiento nueva" Canvas.Left="30" Canvas.Top="300" BorderBrush="Black" PreviewKeyDown="txtfechanac_PreviewKeyDown" TextChanged="txtfechanac_TextChanged"/>
+                <ComboBox x:Name="cbxsexo" Canvas.Left="134" Canvas.Top="372" Width="128" Height="34" RenderTransformOrigin="0.785,0.441" BorderBrush="Black" SelectionChanged="cbxsexo_SelectionChanged"/>
+                <ComboBox x:Name="cbxestadocivil" Height="34" Canvas.Left="134" Canvas.Top="426" Width="128" BorderBrush="Black" SelectionChanged="cbxestadocivil_SelectionChanged"/>
+                <Label Content="Sexo" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="58" Canvas.Top="380" Width="56"/>
+                <Label Content="Estado CIvil" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="43" Canvas.Top="434" RenderTransformOrigin="0.831,0.481"/>
+                <Button x:Name="btnactualizar" Content="Actualizar" HorizontalAlignment="Left" Width="76" Canvas.Left="101" Canvas.Top="527" Click="btnactualizar_Click" BorderBrush="Black"/>
+                <PasswordBox x:Name="pbcontraseña" HorizontalAlignment="Left" VerticalAlignment="Top" Controls:TextBoxHelper.ClearTextButton="True" Controls:TextBoxHelper.Watermark="Introduzca la nueva contraseña" Style="{StaticResource MetroButtonRevealedPasswordBox}" RenderTransformOrigin="13.906,1.615" Canvas.Left="30" Canvas.Top="483" Width="232" Height="23" BorderBrush="Black" PasswordChanged="pbcontraseña_PasswordChanged"/>
+            </Canvas>
+
+
+        </Controls:Flyout>
+
+    </Grid>
+</Controls:MetroWindow>

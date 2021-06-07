@@ -1,0 +1,36 @@
+﻿<Controls:MetroWindow
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+               xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+     xmlns:behaviours="clr-namespace:MahApps.Metro.Behaviours;assembly=MahApps.Metro"
+     xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:metrowpf"
+        xmlns:Custom="http://metro.mahapps.com/winfx/xaml/controls" xmlns:fa="http://schemas.fontawesome.io/icons/" x:Class="metrowpf.planes"
+        mc:Ignorable="d"
+        Title="planes" Height="631.5" Width="821" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <DataGrid x:Name="dgplanes" HorizontalAlignment="Left" Height="277" Margin="268,324,0,0" VerticalAlignment="Top" Width="348"/>
+
+        <Image Width="181" VerticalAlignment="Top" Stretch="Fill" Source="imagenes/Logo BeLife.png" Margin="10,10,0,0" Height="46" HorizontalAlignment="Left"/>
+        <Label VerticalAlignment="Top" Margin="320,94,0,0" HorizontalAlignment="Left" FontSize="36" Foreground="#FF9F37FF" Content="Lista de planes" Background="Transparent"/>
+        <TextBox x:Name="txtbuscarp" HorizontalAlignment="Left" Height="27" Margin="238,237,0,0" Custom:TextBoxHelper.ClearTextButton="True" Custom:TextBoxHelper.Watermark="Ingrese el identificador del plan que desea buscar o eliminar " TextWrapping="Wrap" VerticalAlignment="Top" Width="365" BorderBrush="Black" TextChanged="TextBox_TextChanged"/>
+        <Custom:Tile Margin="704,-46,13,383" Width="Auto" Title="" Height="Auto" Click="Tile_Click_3" Background="{x:Null}">
+            <Image Source="C:\Users\keiro\source\repos\metrowpf\imagenes\left-arrown.png" Width="136" Height="82" RenderTransformOrigin="0.527,0.379" OpacityMask="Black"/>
+        </Custom:Tile>
+        <Button x:Name="btnbuscarp" Content="Buscar" HorizontalAlignment="Left" Margin="623,237,0,0" VerticalAlignment="Top" Width="77" Click="Button_Click" RenderTransformOrigin="0.466,0.111" BorderBrush="Black" Background="#FF9F37FF"/>
+        <Button x:Name="btneliminarp" Content="Eliminar" HorizontalAlignment="Left" Margin="723,237,0,0" VerticalAlignment="Top" Width="77" RenderTransformOrigin="2.293,1.519" Click="btneliminar_Click" Background="#FF9F37FF" BorderBrush="Black"/>
+        <Button x:Name="btncrearp" Content="Crear/Modificar" HorizontalAlignment="Left" Margin="654,269,0,0" VerticalAlignment="Top" Width="114" RenderTransformOrigin="0.067,0.537" Height="27" Background="#FF9F37FF" Click="btncrearc_Click" BorderBrush="Black"/>
+        <Controls:Flyout Position="Right" x:Name="FCrearmodificarplan" Header="Crear/Modificar Plan" Width="297" Margin="0,0,0,-3">
+            <Canvas>
+                <TextBox x:Name="txtidplan" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="259" Controls:TextBoxHelper.ClearTextButton="True" Controls:TextBoxHelper.Watermark="Identificador del plan a crear o modificar" Canvas.Left="13" Canvas.Top="34" BorderBrush="Black" TextChanged="txtidplan_TextChanged"/>
+                <TextBox x:Name="txtnombrep" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Controls:TextBoxHelper.ClearTextButton="True" Controls:TextBoxHelper.Watermark="Nombre del plan a crear o modificar" Canvas.Left="13" Canvas.Top="85" Width="259" BorderBrush="Black" TextChanged="txtnombrep_TextChanged" PreviewTextInput="txtnombrep_PreviewTextInput"/>
+                <TextBox x:Name="txtaprimabase" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="259" Controls:TextBoxHelper.ClearTextButton="True" Controls:TextBoxHelper.Watermark="Prima base a crear o modicar" Canvas.Left="13" Canvas.Top="133" BorderBrush="Black" TextChanged="txtaprimabase_TextChanged"/>
+                <TextBox x:Name="txtpolizaactual" Height="26" TextWrapping="Wrap" VerticalAlignment="Top" Width="259" Controls:TextBoxHelper.ClearTextButton="True" Controls:TextBoxHelper.Watermark=" Poliza actual a crear o modificar" Canvas.Left="13" Canvas.Top="178" BorderBrush="Black" TextChanged="txtpolizaactual_TextChanged"/>
+                <Button x:Name="btncreaplan" Content="Crear plan" Canvas.Left="42" Canvas.Top="242" Click="Button_Click_1" Background="{x:Null}" BorderBrush="Black"></Button>
+                <Button x:Name="btnmodificarp" Content="Modificar plan" Canvas.Left="153" Canvas.Top="242" Click="Button_Click_2" Background="{x:Null}" BorderBrush="Black" ></Button>
+            </Canvas>
+        </Controls:Flyout>
+    </Grid>
+</Controls:MetroWindow>
